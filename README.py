@@ -1,0 +1,18 @@
+"""
+Project 4: Generate the fictional student dataset.
+
+Run:
+    python create_dataset.py
+"""
+
+import csv
+
+columns = ['Student ID', 'Department', 'Level', 'Attendance Percentage', 'Average Examination Score']
+students = [['24/15675', 'Data Science', 300, 92, 89], ['24/13185', 'Political Science', 100, 85, 91], ['24/14634', 'Mathematics', 100, 76, 96], ['24/14359', 'Nursing', 100, 96, 77], ['24/15519', 'Mass communication', 200, 91, 86], ['24/13238', 'Human Anatomy', 400, 71, 73], ['24/15881', 'Human Physiology', 200, 84, 88], ['24/13458', 'Cyber Security', 200, 88, 94], ['24/14791', 'Criminology', 400, 66, 82], ['24/14190', 'Law', 400, 98, 85], ['24/14189', 'Accounting', 200, 97, 62], ['24/15168', 'Industrial chemistry', 300, 74, 92], ['24/14167', 'Software Engineering', 400, 87, 64], ['24/15626', 'Biochemistry', 400, 93, 59], ['24/15462', 'Microbiology', 100, 89, 68], ['24/14299', 'Public Health Science', 100, 90, 83], ['24/14187', 'Architecture', 300, 81, 80], ['24/14890', 'Psychology', 300, 79, 70], ['24/14994', 'Computer Science', 200, 95, 75], ['24/13382', 'Broadcasting', 300, 68, 79]]
+
+with open("student_dataset.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerow(columns)
+    writer.writerows(students)
+
+print(f"Created student_dataset.csv with {len(students)} fictional student records.")
